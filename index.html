@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Catch Game</title>
+</head>
+<body>
+  <div class="start">
+    <h1>Catch The Insect</h1>
+    <button class="play" onclick="playGame()">Play Game</button>
+  </div>
+  <div class="choose">
+   <h2>What Is Your 'Favourite' Insect?</h2> 
+    <div class="container-flex">
+      <div id="i-fly" class="choose-box">
+        Fly
+      <img src="https://pngimg.com/uploads/fly/fly_PNG3946.png">
+      </div>
+      <div id="i-mosquito" class="choose-box">
+        Mosquito
+      <img src="https://pngimg.com/uploads/mosquito/mosquito_PNG18175.png">
+      </div>
+      <div id="i-spider" class="choose-box"> 
+        Spider
+        <img src="https://pngimg.com/uploads/spider/spider_PNG12.png">
+      </div>
+      <div id="i-roach" class="choose-box">
+        Roach
+        <img src="https://pngimg.com/uploads/roach/roach_PNG12163.png">
+      </div>
+      <div class="test"></div>
+    </div>
+  </div>
+  <div id="play-area" class="play-area">
+    <div class="time">Time: 00:00</div>
+    <div class="score">Score: 0</div>
+    <div class="stop-stripe">Do you think, that you win this game? <br>Rather quit ! ! !</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

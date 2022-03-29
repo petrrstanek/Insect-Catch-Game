@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gloria Hallelujah', sans-serif;
+    background-color: 
+    #516dfc;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    transition: 0.4s ease-in;
+}
+
+.start .play{
+    padding: 10px 15px;
+    width: 150px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-family: 'Press Start 2P';
+    color: royalblue;
+}
+.start .play:active{
+    transform: scale(0.98);
+}
+
+.choose{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.4s ease-in;
+}
+
+.choose .container-flex{
+    display: flex;
+    margin-bottom: auto;
+}
+
+.choose-box{
+    border: 3px solid white;
+    width: 150px ;
+    height: 150px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    font-size: 13px;
+}
+
+h2{
+    margin-top: 60px;
+    margin-bottom: auto;
+}
+
+.choose-box:hover{
+    color: black;
+}
+
+.choose-box:hover::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+    color: black;
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+    width: 100px;
+}
+
+.play-area{
+    position: relative;
+    height: 100vh;
+    transition: 0.4s ease-in;
+}
+
+.time{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    font-size: 25px;
+}
+
+.score{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 25px;
+}
+
+
+.i-spider{
+    width: 80px;
+    height: 80px;
+    background-image: url('https://pngimg.com/uploads/spider/spider_PNG12.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.fly{
+    width: 80px;
+    height: 80px;
+    background-image: url('https://pngimg.com/uploads/fly/fly_PNG3946.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+}
+
+.i-mosquito{
+    width: 80px;
+    height: 80px;
+    background-image: url('https://pngimg.com/uploads/mosquito/mosquito_PNG18175.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+    cursor: pointer;
+    position: absolute;
+}
+
+.i-fly{
+    width: 80px;
+    height: 80px;
+    background-image: url('https://pngimg.com/uploads/fly/fly_PNG3946.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+}
+
+.i-roach{
+    width: 80px;
+    height: 80px;
+    background-image: url('https://pngimg.com/uploads/roach/roach_PNG12163.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;    
+    position: absolute;
+    transition: 0.4s ease;
+}
+
+.i-hitted{
+    animation: hit 0.5s forwards linear;
+}
+
+@keyframes hit {
+    0%{
+        width: 80px;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+.stop-stripe{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    transform: translateY(-80px);
+    display: none;
+    
+}
+
+.stop-active{
+    display: flex;
+    animation: 
+    alert 0.5s ease forwards,
+    alert-back 0.5s ease 5s forwards;
+}
+
+@keyframes alert {
+    to {
+        transform: translateY(125px);
+    }
+}
+
+@keyframes alert-back{
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+.stop-stripe::before{
+    content: '';
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
